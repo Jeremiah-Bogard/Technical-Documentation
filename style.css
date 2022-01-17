@@ -1,0 +1,42 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  display: grid;
+  grid-template-areas: "nav doc"
+                       "nav doc";
+  grid-template-columns: 15vw auto;
+  margin: 0;
+}
+#navbar {
+  background-color: #0005;
+  border-right: solid 2px #000a;
+  grid-areas: nav;
+  height: 100vh;
+  left: 0;
+  overflow-y: scroll;
+  position: sticky;
+  top: 0;
+  text-align: center;
+}
+#nav-links {
+  width: 100%;
+}
+#nav-links td {
+  background-color: transparent;
+  margin: 0;
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+}
+#nav-links td:hover {
+  background-color: #0005;
+}
+.nav-link {
+  color: #000;
+  text-decoration: none;
+}
+
+
+#main-doc {
+  grid-areas: doc;
+}
