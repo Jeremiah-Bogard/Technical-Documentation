@@ -7,10 +7,10 @@ body {
                        "nav doc";
   grid-template-columns: 15vw auto;
   margin: 0;
+  overflow-x: hidden;
 }
 #navbar {
   background-color: #0005;
-  border-right: solid 2px #000a;
   grid-areas: nav;
   height: 100vh;
   left: 0;
@@ -39,4 +39,10 @@ body {
 
 #main-doc {
   grid-areas: doc;
+}
+
+.exampleRslt {
+  background-color: #0003;
+  padding: 10px;
+  width: 100%;
 }
