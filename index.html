@@ -26,9 +26,20 @@
         <tr>
           <td><a class="nav-link" href="#The_Meaning">The Meaning</a></td>
         </tr>
+        <tr>
+          <td><a class="nav-link" href="#Nesting_Elements">Nesting Elements</a></td>
+        </tr>
+        <tr>
+          <td><a class="nav-link" href="#Attributes">Attributes</a></td>
+        </tr>
+        <tr>
+          <td><a class="nav-link" href="#Resources">Resources</a></td>
+        </tr>
       </table>
       
     </nav>
+    
+    <button id="toggleNav">&#60;</button>
     
     <main id="main-doc">
       
@@ -66,6 +77,81 @@
           <li><strong>Content</strong>: The content is our text "Hello World". This is the content that our paragraph contains. It is telling the html interperter to display this text to the screen.</li>
           <li><strong>Closing Tag</strong>: The closing tag is the "&#60;/p&#62;". It ends the paragraph. Basically it explains to the html interperter that the paragraph has ended. And everything between the opening tag and this one needs to be display on the screen.</li>
         </ul>
+      </section>
+      
+      <section class="main-section" id="Nesting_Elements">
+        
+        <header>
+          <h2>Nesting Elements</h2>
+        </header>
+        
+        <p>A &#60;p&#62; tag is also known as an element. Of course there are lots of other elements other than the &#60;p&#62; tag. One tag you will most likely use on a regular basis is the &#60;strong&#62; tag. This tag makes the text bold. So it can turn our dog from being very grumpy to:</p>
+        
+        <div class="exampleRslt">
+          My dog is <strong>very</strong> grumpy.
+        </div>
+        
+        <p>Do you see the difference? By adding the &#60;strong&#62; tag we put emphasis on very. So our final code looks like:</p>
+        
+        <div class="exampleCode"><code>
+          &#60;p&#62;My dog is &#60;strong&#62;very&#60;/strong&#62; grumpy.&#60;/p&#62;
+        </code></div>
+        
+        <p>By taking the &#60;strong&#62; element and adding it inside the &#60;p&#62; element, we created a nest. We nested the &#60;strong&#62; element inside of the &#60;p&#62; element. Now to nest an element inside of another element, your nested elements tags go inside of the original element. In other words do <strong>NOT</strong> do this:</p>
+        
+        <div class="exampleCode" style="background-color: #f00; color: #fff;"><code>
+          &#60;p&#62;My dog is &#60;strong&#62;very grumpy&#60;/p&#62;&#60;/strong&#62;
+         </code><div>
+        
+      </section>
+      
+      <section class="main-section" id="Attributes">
+        
+        <header>
+          <h2>Attributes</h2>
+        </header>
+        
+        <p>There are a ton of attributes for programming. Two of the most commonly used attributes are the <strong>class</strong> and <strong>id</strong> attributes. These are useful for styling, in page links, etc. But we will just explore how to add these attributes to our Hello World paragraph.</p>
+        
+        <p>If you recall from earlier in the website we looked at how to create a paragraph using the &#60;p&#62; tag. To style a paragraph you would use CSS. here is a sample of CSS we could do to style our paragraph.</p>
+        
+        <div class="exampleCode"><code>
+          p {
+            color: black;
+          }
+        </code></div>
+        
+        <p>Unfortunatly this will style all of our paragraphs, so how do we only style the one Hello World paragraph? This is where attributes come in. The id attribute will allow us to style only this paragraph. To add an id attribute we write in the opening tag <em>id="attribute_id"</em>. For example:</p>
+        
+        <div class="exampleCode"><code>
+          &#60;p id="hello_world"&#62;Hello World&#60;/p&#62;<br>
+          &#60;p&#62;My dog is &#60;strong&#62;very&#60;/strong&#62; grumpy&#60;/p&#62;
+        </code></div>
+        
+        <p>Now we can select the id "hello world" in our CSS code to style the one paragraph:</p>
+        
+        <div class="exampleCode"><code>
+          #hello_world { color: red };
+        </code></div>
+        
+        <div class="exampleRslt">
+          <span style="color: red">Hello World</span><br>
+          My dog is <strong>very</strong> grumpy
+        </div>
+        
+      </section>
+      
+      <section class="main-section" id="Resources">
+        
+        <header>
+          <h2>Resources</h2>
+        </header>
+        
+        <ul>
+          <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">MDN Web Docs</a></li>
+          <li><a target="_blank" href="https://w3schools.com">W3Schools</a></li>
+        </ul>
+        
       </section>
       
     </main>
